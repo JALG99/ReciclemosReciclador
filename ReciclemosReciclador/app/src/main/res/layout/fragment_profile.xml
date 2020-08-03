@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.ProfileFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <TextView
+            android:id="@+id/TitleSobreMi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif-black"
+            android:textSize="20dp"
+            android:text="Sobre mi"
+            android:textColor="@color/colorNotSelectedBar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:fontFamily="sans-serif-black"
+            android:id="@+id/txtTitleNombre"
+            android:text="Nombres"
+            android:textSize="15dp"
+            android:layout_marginStart="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/TitleSobreMi"
+            />
+        <TextView
+            android:id="@+id/txtInputNombre"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="10dp"
+            android:textSize="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="@color/colorNotSelectedBar"
+            app:layout_constraintStart_toStartOf="@+id/txtInputFechaNacimiento"
+            app:layout_constraintTop_toBottomOf="@+id/TitleSobreMi" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Apellidos"
+            android:textSize="15dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="sans-serif-black"
+            android:id="@+id/txtTitleApellido"
+            app:layout_constraintStart_toStartOf="@+id/txtTitleNombre"
+            app:layout_constraintTop_toBottomOf="@+id/txtInputNombre"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="8dp"
+            android:textSize="15dp"
+            android:textColor="@color/colorNotSelectedBar"
+            android:id="@+id/txtInputApellidos"
+            app:layout_constraintStart_toStartOf="@id/txtInputFechaNacimiento"
+            app:layout_constraintTop_toBottomOf="@+id/txtInputNombre"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DNI"
+            android:textSize="15dp"
+            android:fontFamily="sans-serif-black"
+            android:id="@+id/txtTitleDNI"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="@+id/txtTitleNombre"
+            app:layout_constraintTop_toBottomOf="@+id/txtInputApellidos"
+
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="8dp"
+            android:textSize="15dp"
+            android:textColor="@color/colorNotSelectedBar"
+            android:id="@+id/txtInputDNI"
+            app:layout_constraintStart_toStartOf="@id/txtInputFechaNacimiento"
+            app:layout_constraintTop_toBottomOf="@+id/txtInputApellidos"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fecha de Nacimiento"
+            android:textSize="15dp"
+            android:fontFamily="sans-serif-black"
+            android:id="@+id/txtTitleFechaNacimiento"
+            android:layout_marginTop="15dp"
+            app:layout_constraintEnd_toStartOf="@+id/txtInputFechaNacimiento"
+            app:layout_constraintStart_toStartOf="@+id/txtTitleNombre"
+            app:layout_constraintTop_toBottomOf="@+id/txtInputDNI"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="8dp"
+            android:textColor="@color/colorNotSelectedBar"
+            android:textSize="15dp"
+            android:layout_marginStart="10dp"
+            android:id="@+id/txtInputFechaNacimiento"
+            app:layout_constraintStart_toEndOf="@+id/txtTitleFechaNacimiento"
+            app:layout_constraintTop_toBottomOf="@+id/txtInputDNI"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nro Celular"
+            android:textSize="15dp"
+            android:fontFamily="sans-serif-black"
+            android:id="@+id/txtTitleCelular"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="@+id/txtTitleNombre"
+            app:layout_constraintTop_toBottomOf="@+id/txtInputFechaNacimiento"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="8dp"
+            android:textSize="15dp"
+            android:textColor="@color/colorNotSelectedBar"
+            android:id="@+id/txtInputCelular"
+            app:layout_constraintStart_toStartOf="@id/txtInputFechaNacimiento"
+            app:layout_constraintTop_toBottomOf="@+id/txtInputFechaNacimiento"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Departamento"
+            android:textSize="15dp"
+            android:fontFamily="sans-serif-black"
+            android:id="@+id/txtTitleDepartamento"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="@+id/txtTitleNombre"
+            app:layout_constraintTop_toBottomOf="@+id/txtInputCelular"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="8dp"
+            android:textColor="@color/colorNotSelectedBar"
+            android:textSize="15dp"
+            android:id="@+id/txtInputDepartamento"
+            app:layout_constraintStart_toStartOf="@id/txtInputFechaNacimiento"
+            app:layout_constraintTop_toBottomOf="@+id/txtInputCelular"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Distrito"
+            android:textSize="15dp"
+            android:fontFamily="sans-serif-black"
+            android:id="@+id/txtTitleDistrito"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="@+id/txtTitleNombre"
+            app:layout_constraintTop_toBottomOf="@+id/txtInputDepartamento"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/colorNotSelectedBar"
+            android:layout_marginEnd="8dp"
+            android:textSize="15dp"
+            android:id="@+id/txtInputDistrito"
+            app:layout_constraintStart_toStartOf="@id/txtInputFechaNacimiento"
+            app:layout_constraintTop_toBottomOf="@+id/txtInputDepartamento"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Asociacion"
+            android:textSize="15dp"
+            android:fontFamily="sans-serif-black"
+            android:id="@+id/txtTitleAsociacion"
+            android:textColor="@color/colorPeso"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="@+id/txtTitleNombre"
+            app:layout_constraintTop_toBottomOf="@+id/txtInputDistrito"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="8dp"
+            android:textColor="@color/colorPeso"
+            android:textSize="15dp"
+            android:id="@+id/txtInputAsociacion"
+            app:layout_constraintStart_toStartOf="@id/txtInputFechaNacimiento"
+            app:layout_constraintTop_toBottomOf="@+id/txtInputDistrito"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cod. Reciclador"
+            android:textSize="15dp"
+            android:fontFamily="sans-serif-black"
+            android:id="@+id/txtTitleCodFormalizador"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="@+id/txtTitleNombre"
+            app:layout_constraintTop_toBottomOf="@+id/txtInputAsociacion"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="8dp"
+            android:textColor="@color/colorNotSelectedBar"
+            android:textSize="15dp"
+            android:id="@+id/txtInputCodFormalizador"
+            app:layout_constraintStart_toStartOf="@id/txtInputFechaNacimiento"
+            app:layout_constraintTop_toBottomOf="@+id/txtInputAsociacion"
+
+            />
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="32dp"
+            android:id="@+id/imgLine1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@drawable/line"
+            app:layout_constraintTop_toBottomOf="@+id/txtInputCodFormalizador" />
+
+        <TextView
+            android:id="@+id/txtCuenta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif-black"
+            android:textSize="20dp"
+            android:text="Cuenta"
+            android:textColor="@color/colorNotSelectedBar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgLine1" />
+
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:fontFamily="sans-serif-black"
+            android:id="@+id/txtTitleCorreo"
+            android:text="E-mail  "
+            android:textSize="15dp"
+            android:layout_marginStart="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/txtCuenta"
+            />
+        <TextView
+            android:id="@+id/txtInputCorreo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:textColor="@color/colorNotSelectedBar"
+            android:layout_marginTop="10dp"
+            android:textSize="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/txtInputPassword"
+            app:layout_constraintTop_toBottomOf="@+id/txtCuenta" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contraseña"
+            android:textSize="15dp"
+            android:fontFamily="sans-serif-black"
+            android:id="@+id/txtTitlePassword"
+            android:layout_marginTop="15dp"
+            app:layout_constraintEnd_toStartOf="@+id/txtInputPassword"
+            app:layout_constraintStart_toStartOf="@+id/txtTitleCorreo"
+            app:layout_constraintTop_toBottomOf="@+id/txtInputCorreo"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="8dp"
+            android:textSize="15dp"
+            android:text="*******"
+            android:layout_marginStart="20dp"
+            android:textColor="@color/colorNotSelectedBar"
+            android:id="@+id/txtInputPassword"
+            app:layout_constraintStart_toEndOf="@+id/txtTitlePassword"
+            app:layout_constraintTop_toBottomOf="@+id/txtInputCorreo"
+            />
+
+        <Button
+            android:id="@+id/btnModificarDatos"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="24dp"
+            android:text="Solicitar modificar datos"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtInputPassword" />
+
+        <Button
+            android:id="@+id/btnCerrarSesion"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/content_text_color"
+            android:layout_marginEnd="24dp"
+            android:text="Cerrar Sesion"
+            android:textColor="@color/colorNotSelectedBar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnModificarDatos" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

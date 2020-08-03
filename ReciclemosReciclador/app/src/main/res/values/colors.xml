@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#347032</color>
+    <color name="colorPrimaryDark">#347032</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <color name="colorPeso">#FFA100</color>
+    <color name="colorBarBackground">#FFFFFF</color>
+    <color name="colorSelectedBar">#DD0000</color>
+    <color name="colorNotSelectedBar">#000000</color>
+
+    <color name="card_bg_color">#F4F4F4</color>
+    <color name="title_text_color">#258bd6</color>
+    <color name="content_text_color">#999da4</color>
+
+    <color name="botones_principales">#499344</color>
+    <color name="botones_principales_texto">#FFFFFF</color>
+
+    <color name="colorPlastico">#99EFEFEF</color>
+    <color name="colorVidrio">#99808080</color>
+    <color name="colorPapelCarton">#0C4A7C</color>
+    <color name="colorMetal">#FFC32C</color>
+
+    <color name="amarillo">#E8D319</color>
+    <color name="rojo">#FA1B1B</color>
+    <color name="verde">#19E823</color>
+</resources>

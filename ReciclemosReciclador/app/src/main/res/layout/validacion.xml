@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <ImageView
+        android:id="@+id/imgProducto"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/login" />
+
+    <TextView
+        android:id="@+id/txtNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Nombre Producto"
+        android:textAlignment="textStart"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/imgProducto"
+        app:layout_constraintTop_toTopOf="@+id/imgProducto" />
+
+
+    <ImageView
+        android:id="@+id/imgCategoria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tint="#99E6E6E6"
+        app:layout_constraintBottom_toBottomOf="@+id/txtCategoria"
+        app:layout_constraintStart_toStartOf="@+id/txtNombre"
+        app:layout_constraintTop_toTopOf="@+id/txtCategoria"
+        app:srcCompat="@drawable/active_dot" />
+
+    <TextView
+        android:id="@+id/txtCategoria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:text=" Tipo"
+        android:textColor="@android:color/darker_gray"
+        app:layout_constraintStart_toEndOf="@+id/imgCategoria"
+        app:layout_constraintTop_toBottomOf="@+id/txtNombre" />
+
+    <TextView
+        android:id="@+id/txtContenido"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="0.0 ml"
+        android:textAlignment="textStart"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/txtNombre"
+        app:layout_constraintStart_toEndOf="@+id/txtNombre"
+        app:layout_constraintEnd_toStartOf="@+id/checkBox"
+        app:layout_constraintTop_toTopOf="@+id/txtNombre" />
+
+    <TextView
+        android:id="@+id/txtCantidadV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Cant: 0"
+        android:textColor="@color/colorPeso"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imgProducto"
+        app:layout_constraintStart_toStartOf="@+id/imgCategoria"
+        app:layout_constraintTop_toBottomOf="@+id/txtCategoria" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="190dp"
+        android:scaleX="2"
+        android:scaleY="2"
+        android:textSize="14sp"
+        android:transformPivotX="5dp"
+        android:transformPivotY="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgProducto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgProducto"
+        app:layout_constraintTop_toTopOf="@+id/imgProducto" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

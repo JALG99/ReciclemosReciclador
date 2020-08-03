@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.upc.reciclemosreciclador.Fragments.MonthCondominioFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <TextView
+            android:id="@+id/txtTitleChartBolsas"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="24dp"
+            android:text="CANTIDAD DE BOLSAS DE RESIDUOS ENTREGADOS POR DÍA"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:rotation="-90"
+            android:text="Cantidad de bolsas"
+            android:layout_marginTop="160dp"
+            android:textSize="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/chart"
+            app:layout_constraintTop_toBottomOf="@+id/txtTitleChartBolsas" />
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/chart"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtTitleChartBolsas"
+            tools:ignore="MissingConstraints" />
+
+
+        <TextView
+            android:id="@+id/txtTitleChartResiduos"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="24dp"
+            android:text="CANTIDAD DE RESIDUOS SÓLIDOS ENTREGADOS POR DÍA"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chart" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:rotation="-90"
+            android:text="Cantidad de residuos"
+            android:layout_marginTop="160dp"
+            android:textSize="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/chart2"
+            app:layout_constraintTop_toBottomOf="@+id/txtTitleChartResiduos" />
+
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/chart2"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/relativeTendenciasHoy"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtTitleChartResiduos" />
+
+
+        <RelativeLayout
+            android:id="@+id/relativeTendenciasHoy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/relativeReciclados"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chart2">
+
+            <RelativeLayout
+                android:id="@+id/txtinsertDatos"
+                android:layout_width="69dp"
+                android:layout_height="69dp">
+
+                <TextView
+                    android:id="@+id/txtCantBolsasHoy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:text="0"
+                    android:textColor="#252525"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/txtdatosHoyBolsas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtCantBolsasHoy"
+                    android:layout_centerHorizontal="true"
+                    android:text="residuos "
+                    android:textColor="#252525"
+                    android:textSize="10dp" />
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="69dp"
+                android:layout_height="69dp"
+                android:layout_marginLeft="30dp"
+                android:layout_toEndOf="@+id/txtinsertDatos"
+
+                >
+
+                <TextView
+                    android:id="@+id/txtPesoBolsasHoy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="0"
+                    android:textColor="#252525"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtPesoBolsasHoy"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="20dp"
+                    android:text="kg"
+                    android:textColor="#252525"
+                    android:textSize="10dp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/relativeTendenciasHoy"
+            android:id="@+id/relativeReciclados">
+
+            <RelativeLayout
+                android:id="@+id/relativePlastico"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/relativePapelCarton"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/imagePlastic"
+                    android:layout_width="80dp"
+                    android:paddingStart="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingEnd="5dp"
+                    android:layout_height="60dp"
+                    android:background="@color/colorPlastico"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/ic_plastico"
+                    android:adjustViewBounds="false"
+
+
+                    />
+
+                <TextView
+                    android:id="@+id/txtPlastico"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imagePlastic"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="30dp"
+                    android:textAlignment="center"
+                    android:background="@color/colorPlastico"
+                    android:textSize="10sp"
+                    android:textColor="#000000"
+                    android:text="Plastico" />
+
+                <TextView
+                    android:id="@+id/txtPlasticoCantidad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtPlastico"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="-10dp"
+                    android:text="0" />
+
+                <TextView
+                    android:id="@+id/txtPlasticoPeso"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtPlasticoCantidad"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="10dp"
+                    android:text="0 kg" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativePapelCarton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/relativePlastico"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/imagePaper"
+                    android:layout_width="80dp"
+                    android:layout_height="60dp"
+                    android:layout_centerHorizontal="true"
+                    android:adjustViewBounds="false"
+                    android:background="@color/colorPapelCarton"
+                    android:paddingStart="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingEnd="5dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_papel_carton"
+                    android:tint="#FFFFFF"
+
+                    />
+
+                <TextView
+                    android:id="@+id/txtPapelCarton"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/imagePaper"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="30dp"
+                    android:background="@color/colorPapelCarton"
+                    android:text="Papel/Carton"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="10dp" />
+
+                <TextView
+                    android:id="@+id/txtPapelCartonCantidad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtPapelCarton"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="-10dp"
+                    android:text="0" />
+
+                <TextView
+                    android:id="@+id/txtPapelCartonPeso"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtPapelCartonCantidad"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="10dp"
+                    android:text="0 kg" />
+
+
+
+            </RelativeLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

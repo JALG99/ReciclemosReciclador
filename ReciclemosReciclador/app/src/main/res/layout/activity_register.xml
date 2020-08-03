@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Inicio.RegisterActivity">
+
+        <EditText
+            android:id="@+id/txtCodFormalizado"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="32dp"
+            android:hint="Código de reciclador formalizado"
+            android:inputType="text"
+            app:layout_constraintBottom_toTopOf="@+id/btnBuscar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+        <Button
+            android:id="@+id/btnBuscar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/botones_principales"
+            android:text="Buscar"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="@color/botones_principales_texto"
+            android:textSize="18sp"
+            app:cornerRadius="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/imgFoto"
+            app:layout_constraintEnd_toEndOf="@+id/txtCodFormalizado"
+            app:layout_constraintStart_toStartOf="@+id/txtCodFormalizado"
+            app:layout_constraintTop_toBottomOf="@+id/txtCodFormalizado" />
+
+        <ImageView
+            android:id="@+id/imgFoto"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="16dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/login"
+            app:layout_constraintBottom_toTopOf="@+id/txtNombres"
+            app:layout_constraintEnd_toEndOf="@+id/btnBuscar"
+            app:layout_constraintStart_toStartOf="@+id/btnBuscar"
+            app:layout_constraintTop_toBottomOf="@+id/btnBuscar" />
+
+        <TextView
+            android:id="@+id/txtNombres"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="----Nombres----"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/txtApellidos"
+            app:layout_constraintEnd_toEndOf="@+id/imgFoto"
+            app:layout_constraintStart_toStartOf="@+id/imgFoto"
+            app:layout_constraintTop_toBottomOf="@+id/imgFoto" />
+
+        <TextView
+            android:id="@+id/txtApellidos"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="----Apellidos----"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/txtDNI"
+            app:layout_constraintEnd_toEndOf="@+id/txtNombres"
+            app:layout_constraintStart_toStartOf="@+id/txtNombres"
+            app:layout_constraintTop_toBottomOf="@+id/txtNombres" />
+
+        <TextView
+            android:id="@+id/txtDNI"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="----DNI----"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/txtAsociacion"
+            app:layout_constraintEnd_toEndOf="@+id/txtApellidos"
+            app:layout_constraintStart_toStartOf="@+id/txtApellidos"
+            app:layout_constraintTop_toBottomOf="@+id/txtApellidos" />
+
+        <TextView
+            android:id="@+id/txtAsociacion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="----Asociación----"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/txtEmail"
+            app:layout_constraintEnd_toEndOf="@+id/txtDNI"
+            app:layout_constraintStart_toStartOf="@+id/txtDNI"
+            app:layout_constraintTop_toBottomOf="@+id/txtDNI" />
+
+        <Button
+            android:id="@+id/btnRegistrar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/botones_principales"
+            android:text="Registrarse"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="@color/botones_principales_texto"
+            android:textSize="18sp"
+            app:cornerRadius="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/btnLogin"
+            app:layout_constraintEnd_toEndOf="@+id/btntxtCondiciones"
+            app:layout_constraintStart_toStartOf="@+id/btntxtCondiciones"
+            app:layout_constraintTop_toBottomOf="@+id/btntxtCondiciones" />
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/botones_principales_texto"
+            android:text="Ya tengo una cuenta"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="@color/botones_principales"
+            android:textSize="18sp"
+            app:cornerRadius="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/btnRegistrar"
+            app:layout_constraintStart_toStartOf="@+id/btnRegistrar"
+            app:layout_constraintTop_toBottomOf="@+id/btnRegistrar" />
+
+        <EditText
+            android:id="@+id/txtPassword"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="Contraseña: Min. 6 caracteres, 1 mayus, 1 minus y 1 número"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/txtRepetirPassword"
+            app:layout_constraintEnd_toEndOf="@+id/txtEmail"
+            app:layout_constraintStart_toStartOf="@+id/txtEmail"
+            app:layout_constraintTop_toBottomOf="@+id/txtEmail" />
+
+        <EditText
+            android:id="@+id/txtRepetirPassword"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="Repetir Contraseña"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/checkbox"
+            app:layout_constraintEnd_toEndOf="@+id/txtPassword"
+            app:layout_constraintStart_toStartOf="@+id/txtPassword"
+            app:layout_constraintTop_toBottomOf="@+id/txtPassword" />
+
+        <CheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:text="Mostrar Contraseña"
+            app:layout_constraintBottom_toTopOf="@+id/btntxtCondiciones"
+            app:layout_constraintEnd_toEndOf="@+id/txtRepetirPassword"
+            app:layout_constraintStart_toStartOf="@+id/txtRepetirPassword"
+            app:layout_constraintTop_toBottomOf="@+id/txtRepetirPassword" />
+
+        <EditText
+            android:id="@+id/txtEmail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Correo electrónico"
+            android:inputType="textEmailAddress"
+            android:singleLine="true"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/txtPassword"
+            app:layout_constraintEnd_toEndOf="@+id/txtAsociacion"
+            app:layout_constraintStart_toStartOf="@+id/txtAsociacion"
+            app:layout_constraintTop_toBottomOf="@+id/txtAsociacion" />
+
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Registro"
+            android:textColor="#347032"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/txtCodFormalizado"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/btntxtCondiciones"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Al registrarte aceptas las condiciones de servicio."
+            android:textAllCaps="false"
+            android:textColor="#2196F3"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/btnRegistrar"
+            app:layout_constraintEnd_toEndOf="@+id/checkbox"
+            app:layout_constraintStart_toStartOf="@+id/checkbox"
+            app:layout_constraintTop_toBottomOf="@+id/checkbox" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

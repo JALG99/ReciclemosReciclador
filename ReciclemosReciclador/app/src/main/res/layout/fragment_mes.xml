@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.MesFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/txtMesSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:layout_marginTop="20dp"
+            android:text="Mes"
+            app:layout_constraintBottom_toTopOf="@+id/spnResiduo"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toEndOf="@+id/txtCondominioSpinner"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:id="@+id/spnMes"
+            android:layout_width="wrap_content"
+            android:layout_height="43dp"
+            android:layout_marginTop="20dp"
+            android:hint="Seleccione el mes"
+            app:layout_constraintBottom_toTopOf="@+id/spnResiduo"
+            app:layout_constraintStart_toStartOf="@+id/spnCondominio"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/txtResiduoSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:text="Residuo"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toTopOf="@+id/spnCondominio"
+            app:layout_constraintEnd_toEndOf="@+id/txtCondominioSpinner"
+            app:layout_constraintTop_toBottomOf="@+id/spnMes" />
+
+        <Spinner
+            android:id="@+id/spnResiduo"
+            android:layout_width="wrap_content"
+            android:layout_height="43dp"
+            android:layout_marginTop="5dp"
+            android:hint="Seleccione el tipo de residuo"
+            app:layout_constraintBottom_toTopOf="@+id/spnCondominio"
+            app:layout_constraintStart_toStartOf="@+id/spnCondominio"
+            app:layout_constraintTop_toBottomOf="@+id/spnMes" />
+
+        <TextView
+            android:id="@+id/txtCondominioSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:text="Condominio"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toStartOf="@+id/spnCondominio"
+            android:layout_marginTop="10dp"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spnResiduo" />
+
+        <Spinner
+            android:id="@+id/spnCondominio"
+            android:layout_width="wrap_content"
+            android:layout_height="43dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:hint="Seleccione el tipo de residuo"
+            app:layout_constraintBottom_toTopOf="@+id/txtTitleKilos"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/txtCondominioSpinner"
+            app:layout_constraintTop_toBottomOf="@+id/spnResiduo" />
+
+        <TextView
+            android:id="@+id/txtTitleKilos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Kilos Totales:  "
+            android:textSize="18dp"
+            app:layout_constraintStart_toStartOf="@+id/txtTitleCondominios"
+            app:layout_constraintTop_toBottomOf="@+id/spnCondominio" />
+
+        <TextView
+            android:id="@+id/txtInputKilos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="36dp"
+            android:text=""
+            android:textSize="16dp"
+            app:layout_constraintStart_toEndOf="@+id/txtTitleKilos"
+            app:layout_constraintTop_toBottomOf="@+id/spnCondominio" />
+
+
+        <TextView
+            android:id="@+id/txtTitleCantidad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Cant. Bolsas:  "
+
+            android:textSize="18dp"
+            app:layout_constraintStart_toStartOf="@+id/txtTitleCondominios"
+            app:layout_constraintTop_toBottomOf="@+id/txtInputKilos" />
+
+        <TextView
+            android:id="@+id/txtInputCantidad"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="10dp"
+            android:text=""
+            android:textSize="16dp"
+            app:layout_constraintStart_toStartOf="@+id/txtInputKilos"
+            app:layout_constraintTop_toBottomOf="@+id/txtInputKilos" />
+
+
+        <TextView
+            android:id="@+id/txtTitleGeneradores"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Cant. Generadores:"
+            android:textSize="18dp"
+            app:layout_constraintStart_toStartOf="@+id/txtTitleCondominios"
+            app:layout_constraintTop_toBottomOf="@+id/txtInputCantidad" />
+
+        <TextView
+            android:id="@+id/txtInputGeneradores"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text=""
+            android:textSize="16dp"
+
+            app:layout_constraintStart_toStartOf="@+id/txtInputCondominios"
+            app:layout_constraintTop_toBottomOf="@+id/txtInputCantidad" />
+
+
+        <TextView
+            android:id="@+id/txtInputCondominios"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:text=""
+            android:textSize="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/txtTitleCondominios"
+            app:layout_constraintTop_toBottomOf="@+id/txtInputGeneradores" />
+
+        <TextView
+            android:id="@+id/txtTitleCondominios"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Cant. Condominios:"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/txtInputCondominios"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtInputGeneradores" />
+
+        <TextView
+            android:id="@+id/txtTitlePieChart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="200dp"
+            android:text="POR TIPO DE RESIDUO"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtInputCondominios" />
+
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/piechartResiduos"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/txtTitleTopCondominios"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtTitlePieChart" />
+
+        <TextView
+            android:id="@+id/txtTitleTopCondominios"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="23dp"
+            android:layout_marginEnd="203dp"
+            android:text="TOP 3 CONDOMINIOS"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/piechartResiduos" />
+
+
+        <TextView
+            android:id="@+id/txtNombreCondominio1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="sans-serif-black"
+            android:text=""
+            android:textSize="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/txtPesoCondominio1"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtTitleTopCondominios" />
+
+        <TextView
+            android:id="@+id/txtPesoCondominio1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="30dp"
+            android:text=""
+            android:textSize="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/txtNombreCondominio1"
+            app:layout_constraintTop_toBottomOf="@+id/txtTitleTopCondominios" />
+
+        <TextView
+            android:id="@+id/txtNombreCondominio2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="sans-serif-black"
+            android:textSize="16dp"
+
+            app:layout_constraintEnd_toStartOf="@+id/txtPesoCondominio2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtPesoCondominio1" />
+
+        <TextView
+            android:id="@+id/txtPesoCondominio2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/txtNombreCondominio2"
+            app:layout_constraintTop_toBottomOf="@+id/txtPesoCondominio1" />
+
+        <TextView
+            android:id="@+id/txtNombreCondominio3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="sans-serif-black"
+            android:text=""
+            android:textSize="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/txtPesoCondominio3"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtPesoCondominio2" />
+
+        <TextView
+            android:id="@+id/txtPesoCondominio3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:text=""
+            android:textSize="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/txtTitleChartBolsas"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/txtNombreCondominio3"
+            app:layout_constraintTop_toBottomOf="@+id/txtPesoCondominio2" />
+
+
+        <TextView
+            android:id="@+id/txtTitleChartBolsas"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="24dp"
+            android:text="KILOS DE RESIDUOS RECIBIDOS POR MES"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtPesoCondominio3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="160dp"
+            android:rotation="-90"
+            android:text="Kilos"
+            android:textSize="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/chartResiduo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtTitleChartBolsas" />
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/chartResiduo"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtTitleChartBolsas"
+            tools:ignore="MissingConstraints" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

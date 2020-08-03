@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.DetalleCondominioFragment">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Condominio"
+        android:textSize="25dp"
+        android:id="@+id/txtTitleCondominio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:layout_marginStart="8dp"
+        android:src="@mipmap/ic_launcher_round"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/imgRutaCondominio"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitleCondominio" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:id="@+id/txtDireccionCondominio"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgRutaCondominio" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:id="@+id/txtUrbanizacionCondominio"
+        app:layout_constraintStart_toStartOf="@+id/txtDireccionCondominio"
+        app:layout_constraintTop_toBottomOf="@+id/txtDireccionCondominio"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:id="@+id/txtDistritoCondominio"
+        app:layout_constraintStart_toStartOf="@+id/txtUrbanizacionCondominio"
+        app:layout_constraintTop_toBottomOf="@+id/txtUrbanizacionCondominio"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:id="@+id/TitleContacto"
+        android:textSize="18dp"
+        android:text="Contacto:"
+        android:fontFamily="sans-serif-black"
+        app:layout_constraintStart_toStartOf="@+id/txtDistritoCondominio"
+        app:layout_constraintTop_toBottomOf="@+id/txtDistritoCondominio"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:id="@+id/txtNombreContactoCondominio"
+        app:layout_constraintStart_toStartOf="@+id/TitleContacto"
+        app:layout_constraintTop_toBottomOf="@+id/TitleContacto"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:id="@+id/txtNumeroContactoCondominio"
+        app:layout_constraintStart_toStartOf="@+id/txtNombreContactoCondominio"
+        app:layout_constraintTop_toBottomOf="@+id/txtNombreContactoCondominio"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:id="@+id/TitleContenedor"
+        android:textSize="18dp"
+        android:text="Detalle del contenedor:"
+        android:fontFamily="sans-serif-black"
+        app:layout_constraintStart_toStartOf="@+id/txtNumeroContactoCondominio"
+        app:layout_constraintTop_toBottomOf="@+id/txtNumeroContactoCondominio"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Unidades: 3"
+        android:id="@+id/txtUnidadesContenedorCondominio"
+        app:layout_constraintStart_toStartOf="@+id/TitleContenedor"
+        app:layout_constraintTop_toBottomOf="@+id/TitleContenedor"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Capacidad maxima por unidad: 1100L"
+        android:id="@+id/txtCapacidadContenedorCondominio"
+        app:layout_constraintStart_toStartOf="@+id/txtUnidadesContenedorCondominio"
+        app:layout_constraintTop_toBottomOf="@+id/txtUnidadesContenedorCondominio"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Estado: Apto para recoger"
+        android:id="@+id/txtAptoContenedorCondominio"
+        app:layout_constraintStart_toStartOf="@+id/txtCapacidadContenedorCondominio"
+        app:layout_constraintTop_toBottomOf="@+id/txtCapacidadContenedorCondominio"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
